@@ -31,21 +31,19 @@
     .rank-num { font-weight: bold; font-size: 1.2em; margin-right: 15px; color: #555; }
     .student-name { flex-grow: 1; font-weight: 500; }
     .student-marks { font-weight: bold; color: #2e7d32; }
-
-    /* Responsive පෙනුම සඳහා අත්‍යවශ්‍ය කෝඩ් එක */
-    * {
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-        overflow-x: hidden; /* පැත්තට Scroll වීම නවත්වයි */
-    }
-
-    /* ලොකු ඉඩකඩක් ගන්නා කොටස් කුඩා තිරයට සකසයි */
-    .rank-container, .links-wrapper, .container-fluid {
+<style>
+    .carousel-item img {
+        height: 60vh !important; /* ෆෝන් එකේදී ටිකක් අඩු උසක් ලබා දීම */
+        object-fit: cover !important;
         width: 100% !important;
-        padding-left: 10px !important;
-        padding-right: 10px !important;
     }
 
+    @media (min-width: 768px) {
+        .carousel-item img {
+            height: 80vh !important; /* ලැප් එකේදී නැවතත් 80vh කරයි */
+        }
+    }
+</style>
 </style>
    
     <!-- CSS (head කොටසට) -->
