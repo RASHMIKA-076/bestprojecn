@@ -1,0 +1,440 @@
+<body><!DOCTYPE html>
+<html lang="en">
+<head><!-- Rank Section Style -->
+<style>
+    .rank-container {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        max-width: 1800px;
+        margin: 20px auto;
+        background: #7a48d66b;
+        padding: 20px;
+        border-radius: 25px;
+        box-shadow: 0 8px 9px rgba(0,0,0,0.1);
+    }
+    .rank-title {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    .rank-item {
+        display: flex;
+        align-items: center;
+        background: rgb(246, 247, 245);
+        margin: 10px 0;
+        padding: 10px 15px;
+        border-radius: 10px;
+        border-left: 5px solid #ffcc00; /* රන්වන් පාටින් */
+        transition: transform 0.2s;
+    }
+    .rank-item:hover { transform: scale(1.02); }
+    .rank-num { font-weight: bold; font-size: 1.2em; margin-right: 15px; color: #555; }
+    .student-name { flex-grow: 1; font-weight: 500; }
+    .student-marks { font-weight: bold; color: #2e7d32; }
+</style>
+    <!-- CSS (head කොටසට) -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<!-- JS (body ටැගයට පෙර) -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // ඇනිමේෂන් එක සිදුවන වේගය (මිලි තත්පර 1000 = තත්පර 1)
+    once: true      // වරක් පමණක් ඇනිමේෂන් එක සිදුවීමට
+  });
+</script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Echem Navbar</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* මෙතන තමයි CSS තියෙන්නේ - මෙය HTML ගොනුව ඇතුළෙම තියෙනවා */
+        .navbar {
+            background-color: #1a1a1a;
+            padding: 15px 50px;
+        }
+        .nav-link {
+            color: white !important;
+            position: relative;
+            transition: 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #00cba9;
+            bottom: 0;
+            left: 0;
+            transition: 0.3s;
+        }
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+        .btn-login {
+            border: 1px solid white;
+            color: white;
+            padding: 5px 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="image/photo_33_2026-06-08_07-57-07.jpg" style="height: 40px;">
+            </a>
+            <div class="navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Our Process</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Exam Centers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Top 20 Ranks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Student Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+                <a href="#" class="btn btn-login ms-3">Login</a>
+            </div>
+        </div>
+    </nav><style>
+    /* Hero section එකේ උස සහ පසුබිම */
+    .hero-section {
+        position: relative;
+        height: 80vh; /* තිරයෙන් 80% ක් උස ගනී */
+    }
+    
+    /* පින්තූර අඳුරු කිරීම (Overlay) */
+    .carousel-item img {
+        height: 80vh;
+        object-fit: cover;
+        filter: brightness(40%); /* පින්තූරය අඳුරු කර අකුරු කැපී පෙනෙන ලෙස සකසයි */
+    }
+
+    /* අකුරු මැදට ගැනීම */
+    .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+        z-index: 2;
+    }
+
+    /* බොත්තම් වල මෝස්තරය */
+    .btn-portal {
+        background-color: #ffc107;
+        color: black;
+        font-weight: bold;
+        padding: 10px 30px;
+        border-radius: 30px;
+        border: none;
+    }
+</style>
+
+<!-- Carousel -->
+<div id="heroCarousel" class="carousel slide hero-section" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <!-- පින්තූර 1 -->
+        <div class="carousel-item active">
+            <img src="image/photo_33_2026-06-08_07-57-07.jpg" class="d-block w-100" alt="Slide 1">
+        </div>
+        <!-- පින්තූර 2 -->
+        <div class="carousel-item">
+            <img src="image/photo_36_2026-06-08_07-57-07.jpg" class="d-block w-100" alt="Slide 2">
+        </div>
+         <!-- පින්තූර 3 -->
+        <div class="carousel-item">
+            <img src="image/photo_2_2026-06-08_07-57-07.jpg" class="d-block w-100" alt="Slide 2">
+        </div>
+         <!-- පින්තූර 4 -->
+        <div class="carousel-item">
+            <img src="image/photo_3_2026-06-08_07-57-07.jpg" class="d-block w-100" alt="Slide 2">
+        </div> 
+        <!-- පින්තූර 5 -->
+        <div class="carousel-item">
+            <img src="image/photo_19_2026-06-08_07-57-07.jpg" class="d-block w-100" alt="Slide 2">
+        </div>
+         <!-- පින්තූර 6 -->
+        <div class="carousel-item">
+            <img src="image/photo_32_2026-06-08_07-57-07.jpg" class="d-block w-100" alt="Slide 2">
+        </div> <!-- පින්තූර 7 -->
+        <div class="carousel-item">
+            <img src="image/photo_4_2026-06-08_07-57-07.jpg" class="d-block w-100" alt="Slide 2">
+        </div> <!-- පින්තූර 8 -->
+        <div class="carousel-item">
+            <img src="image/photo_20_2026-06-08_07-57-07.jpg" class="d-block w-100" alt="Slide 2">
+        </div>
+    </div>
+
+    <!-- උඩින් පෙන්වන අකුරු සහ බොත්තම් -->
+    <div class="hero-text">
+        <h1 class="display-3 fw-bold">දිවයිනේ වැඩිම සිසුන් පිරිසක් සහභාගී වන</h1>
+        <h2 class="display-4">සාමාන්‍යය පෙල පන්තිය</h2>
+        <div class="mt-4">
+            <!-- href තුළට ඔබේ අලුත් පිටුවේ ලින්ක් එක දාන්න -->
+<a href="student-portal.html" target="_blank" class="btn btn-portal btn-lg">Student Portal</a>
+        </div>
+    </div>
+
+    <!-- Carousel Controls (ඊතල) -->
+    <button class="carousel-control-prev" type="button" datapPp-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div><section class="container my-5 py-5">
+    <div class="row align-items-center">
+        <div class="col-lg-6"data-aos="fade-right">
+            <img src="image/photo_32_2026-06-08_07-57-07.jpg" class="img-fluid" alt="Amila Dasanayake">
+        </div>
+
+        <div class="col-lg-6"data-aos="fade-right">
+            <div class="mb-3" style="width: 50px; height: 3px; background-color: #ffc107;"></div> <h1 class="fw-bold">About OL </h1>
+            <h4 class="text-muted">Rashmika Shrimal</h4>
+            <p class="mt-4 text-secondary" style="line-height: 1.8;">
+                පන්ති ආරම්භ කර වසර 4ක් යන විට Ordinary level දිවයිනේ මුල්  A සාමාර්ථ බහුලම ළමුන්  අප පන්තිය සතු විය. 
+                පසුගිය වසර වන විට එය තව දුරටත් වැඩි විය. මෙම වසරේ එය තව  වැඩි විය. 
+                ඒ දිස්ත්‍රික් මුල්  සිසුන් 200 කට වැඩි ප්‍රමාණයක් සමගය.
+                
+            </p>
+            <a href="#" class="btn btn-warning mt-3 px-4 py-2" style="border-radius: 30px;">Read More →</a></section>
+            
+        </div>
+    </div><!-- Work Process Section -->
+<section style="background-color: #1a2a40; padding: 80px 0; color: white; text-align: center; overflow: hidden;">
+    <div style="max-width: 1000px; margin: auto; position: relative;">
+        <h5 style="color: #ffc107; margin-bottom: 10px;">Our Successful</h5>
+        <h1 style="font-weight: bold; margin-bottom: 60px;">Work Process</h1>
+
+        <!-- අයිකන අතර සම්බන්ධ කරන රේඛාව -->
+        <div style="position: absolute; top: 165px; left: 10%; width: 80%; height: 2px; background-color: #555; z-index: 0;"></div>
+
+        <!-- අයිකන පෙළ -->
+        <div style="display: flex; justify-content: space-between; position: relative; z-index: 1;">
+            
+            <!-- පියවර 1 -->
+            <div style="flex: 1; transition: 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                <div style="width: 80px; height: 80px; border: 2px solid white; background-color: #1a2a40; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto; font-size: 30px; transition: 0.3s;" onmouseover="this.style.backgroundColor='#ffc107'; this.style.color='black'" onmouseout="this.style.backgroundColor='#1a2a40'; this.style.color='white'">
+                    <i class="bi bi-book"></i>
+                </div>
+                <h6 style="font-weight: bold;">නිවැරදි විෂය කරුණු</h6>
+                <p style="font-size: 12px; color: #aaa; margin-top: 10px;">විෂය නිර්දේශය ආවරණය වන <br> නිවැරදි විෂය කරුණු <br> සම්පිණ්ඩනය කර සිසුන්ට ඉගැන්වීම</p>
+            </div>
+
+            <!-- පියවර 2 -->
+            <div style="flex: 1; transition: 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                <div style="width: 80px; height: 80px; border: 2px solid white; background-color: #1a2a40; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto; font-size: 30px; transition: 0.3s;" onmouseover="this.style.backgroundColor='#ffc107'; this.style.color='black'" onmouseout="this.style.backgroundColor='#1a2a40'; this.style.color='white'">
+                    <i class="bi bi-lightbulb"></i>
+                </div>
+                <h6 style="font-weight: bold;">විෂයානුබද්ධ ක්‍රියාකාරකම්</h6>
+                <p style="font-size: 12px; color: #aaa; margin-top: 10px;">විෂය කරුණු මතක තබා <br> ගැනීම පහසු කිරීම උදෙසා <br> සුවිශේෂ ක්‍රමවේද සමීප කිරීම</p>
+            </div>
+
+            <!-- පියවර 3 -->
+            <div style="flex: 1; transition: 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                <div style="width: 80px; height: 80px; border: 2px solid white; background-color: #1a2a40; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto; font-size: 30px; transition: 0.3s;" onmouseover="this.style.backgroundColor='#ffc107'; this.style.color='black'" onmouseout="this.style.backgroundColor='#1a2a40'; this.style.color='white'">
+                    <i class="bi bi-file-earmark-text"></i>
+                </div>
+                <h6 style="font-weight: bold;">විශේෂ ප්‍රශ්න පත්‍ර</h6>
+                <p style="font-size: 12px; color: #aaa; margin-top: 10px;">සුවිශේෂ ප්‍රශ්න පත්‍ර මගින් <br> සිසුන් දැනුමින් සහ අත්දැකීම් <br> මගින් උසස් පෙළට සූදානම් කිරීම</p>
+            </div>
+
+            <!-- පියවර 4 -->
+            <div style="flex: 1; transition: 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                <div style="width: 80px; height: 80px; border: 2px solid white; background-color: #1a2a40; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto; font-size: 30px; transition: 0.3s;" onmouseover="this.style.backgroundColor='#ffc107'; this.style.color='black'" onmouseout="this.style.backgroundColor='#1a2a40'; this.style.color='white'">
+                    <i class="bi bi-calendar-check"></i>
+                </div>
+                <h6 style="font-weight: bold;">නිවැරදි කාල රාමුව</h6>
+                <p style="font-size: 12px; color: #aaa; margin-top: 10px;">විෂය කරුණු පන්තිය තුළ දීම <br> ආවරණය කිරීමෙන් නිවැරදි <br> කාල රාමුවක් තුළ මෙහෙයවීම</p>
+            </div>
+
+            <!-- පියවර 5 -->
+            <div style="flex: 1; transition: 0.3s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                <div style="width: 80px; height: 80px; border: 2px solid white; background-color: #1a2a40; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto; font-size: 30px; transition: 0.3s;" onmouseover="this.style.backgroundColor='#ffc107'; this.style.color='black'" onmouseout="this.style.backgroundColor='#1a2a40'; this.style.color='white'">
+                    <span style="font-weight: bold;">A</span>
+                </div>
+                <h6 style="font-weight: bold;">විශිෂ්ඨතම ප්‍රතිඵල</h6>
+                <p style="font-size: 12px; color: #aaa; margin-top: 10px;">අවසාන ප්‍රතිඵලයක් ලෙස <br> සිසුන්ට විශිෂ්ඨතම ප්‍රතිඵලයක් <br> ලබාගැනීම සඳහා මගපෙන්වීම</p>
+                
+            </div>
+        </div>
+    </div>
+    
+</section>
+</section>
+
+<section class="container my-5 py-5">
+    <div class="row align-items-center">
+        <!-- පින්තූරය සඳහා fade-right ඇනිමේෂන් එක -->
+        <div class="col-lg-6" data-aos="fade-right">
+            <img src="image/photo_15_2026-06-08_07-57-07.jpg" class="img-fluid" alt="Amila Dasanayake">
+        </div>
+
+        <!-- පෙළ සඳහා fade-left ඇනිමේෂන් එක -->
+        <div class="col-lg-6" data-aos="fade-left">
+            <div class="mb-3" style="width: 50px; height: 3px; background-color: #ffc107;"></div> 
+            <h1 class="fw-bold">About OL </h1>
+            <h4 class="text-muted">Rashmika Shrimal</h4>
+            <p class="mt-4 text-secondary" style="line-height: 1.8;">
+                පන්ති ආරම්භ කර වසර 4ක් යන විට Ordinary level දිවයිනේ මුල් A සාමාර්ථ බහුලම ළමුන් අප පන්තිය සතු විය. 
+                පසුගිය වසර වන විට එය තව දුරටත් වැඩි විය. මෙම වසරේ එය තව වැඩි විය. 
+                ඒ දිස්ත්‍රික් මුල් සිසුන් 200 කට වැඩි ප්‍රමාණයක් සමගය.
+            </p>
+            <a href="#" class="btn btn-warning mt-3 px-4 py-2" style="border-radius: 30px;">Read More →</a>
+        </div>
+    </div>
+</section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- මේ ලින්ක් එක දාන්න -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<!-- මේ ස්ක්‍රිප්ට් එක දාන්න -->
+<script>
+  AOS.init({
+    duration: 1000, 
+    once: false,       
+    mirror: true       
+  });
+</script>
+<!-- මෙය ඔබගේ වෙබ් පිටුවේ අදාළ කොටසට ඇතුළත් කරන්න -->
+<section class="container-fluid py-5" style="background-color: #f1f1eb;">
+    <div class="row align-items-center">
+        <!-- වම් පස විස්තරය -->
+        <div class="col-lg-6 px-5" data-aos="fade-right">
+            <h2 class="display-5 fw-bold mb-4">EDUCATION CENTER ANURADHPURA</h2>
+            <p class="text-secondary" style="line-height: 1.8; font-size: 1.1rem;">
+              Education is the most powerful tool one can possess. It transforms lives, broadens horizons, and opens doors to endless opportunities. It is not merely about acquiring knowledge from textbooks but about developing critical thinking, character, and the ability to navigate the complexities of life. An educated individual is better equipped to make informed decisions, contribute meaningfully to society, and break the cycles of poverty. Education fosters innovation, promotes equality, and drives progress. It empowers people to challenge injustice and advocate for positive change. By investing in learning, we invest in a brighter future, not just for ourselves but for the entire world. Ultimately, education is the foundation of a civilized and prosperous civilization, shaping humanity and lighting the path toward a better, more equitable, and enlightened existence for every single person.
+                <br><br>
+               
+            </p>
+        </div>
+
+        <!-- දකුණු පස පින්තූරය -->
+        <div class="col-lg-6" data-aos="fade-left">
+            <img src="image/sri-lanka-map-art-free-vector.jpg" class="img-fluid" alt="ගුරුතුමා පිළිබඳ">
+        </div>
+    </div>
+</section>
+
+<!-- AOS Animation සඳහා අත්‍යවශ්‍ය ස්ක්‍රිප්ට් (පිටුවේ අන්තිමට දාන්න) -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1200,
+    once: false,
+    mirror: true
+  });
+</script>
+<!-- Rank Section HTML -->
+<div class="rank-container">
+    <h2 class="rank-title">🏆 Top 5 Students</h2>
+    
+    <div class="rank-item">
+        <span class="rank-num">01</span>
+        <span class="student-name">A.P.BUWANIDU KUMARA</span>
+        <span class="student-marks">98%</span>
+    </div>
+    
+    <div class="rank-item">
+        <span class="rank-num">02</span>
+        <span class="student-name">W,P.ANUHAS </span>
+        <span class="student-marks">95%</span>
+    </div>
+    
+    <div class="rank-item">
+        <span class="rank-num">03</span>
+        <span class="student-name">C.K.SUVIMAL VIHARA</span>
+        <span class="student-marks">92%</span>
+    </div>
+    
+    <div class="rank-item">
+        <span class="rank-num">04</span>
+        <span class="student-name">J.K.SHEHARA </span>
+        <span class="student-marks">90%</span>
+    </div>
+    
+    <div class="rank-item">
+        <span class="rank-num">05</span>
+        <span class="student-name">G.V.UPUN</span>
+        <span class="student-marks">88%</span>
+    </div>
+</div>
+</body>
+</html>
+<!-- මෙය ඔබේ HTML පිටුවේ ඔබට අවශ්‍ය තැනට Paste කරන්න -->
+
+<style>
+    /* මෙම style කොටස නිසා තමයි image_608576.png හි වගේ ලස්සන පෙනුමක් සහ ඇනිමේෂන් එක ලැබෙන්නේ */
+    .links-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 20px;
+        font-family: sans-serif;
+    }
+
+    .my-card {
+        background: white;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #000;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .my-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .my-card img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 15px;
+        object-fit: cover;
+    }
+</style>
+
+<div class="links-wrapper">
+    <!-- Telegram Card -->
+    <a href="https://t.me/APOrdinary2026" class="my-card">
+        <img src="image/R.png" alt="Icon">
+        <div>
+            <h3 style="margin:0;">2026 Theory</h3>
+            <p style="margin:0; font-size:14px; color:#666;">https://t.me/APOrdinary2026</p>
+        </div>
+    </a>
+
+    <!-- YouTube Card -->
+    <a href="https://youtube.com/@srimalwarnasuriya?si=a3zqanQT9-1eeJiX" class="my-card">
+        <img src="image/photo_1_jpg.webp" alt="Icon">
+        <div>
+            <h3 style="margin:0;">YouTube Channel</h3>
+            <p style="margin:0; font-size:14px; color:#666;">@ChannelName</p>
+        </div>
+    </a>
+
+    <!-- WhatsApp Card -->
+    <a href="https://wa.me/message/YYPGPBXK6UZNA1" class="my-card">
+        <img src="image/whatsapp-messaging-application-button-on-green-vector-49498856.webp" alt="Icon">
+        <div>
+            <h3 style="margin:0;">WhatsApp Group</h3>
+            <p style="margin:0; font-size:14px; color:#666;">0765791533</p>
+        </div>
+    </a>
+</div>
+</body>
+
+</html>
