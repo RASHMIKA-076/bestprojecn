@@ -31,37 +31,23 @@
     .rank-num { font-weight: bold; font-size: 1.2em; margin-right: 15px; color: #555; }
     .student-name { flex-grow: 1; font-weight: 500; }
     .student-marks { font-weight: bold; color: #2e7d32; }
-</style>
     <style>
-    /* 1. තිරයෙන් පිටතට දේවල් යාම නවත්වයි */
-    html, body {
-        width: 100%;
-        overflow-x: hidden;
-    }
-
-    /* 2. සියලුම Container සහ Div වල පළල ස්වයංක්‍රීය කරයි */
-    div, section, .rank-container, .links-wrapper {
+    /* Responsive පෙනුම සඳහා අත්‍යවශ්‍ය කෝඩ් එක */
+    * {
         max-width: 100% !important;
         box-sizing: border-box !important;
+        overflow-x: hidden; /* පැත්තට Scroll වීම නවත්වයි */
     }
 
-    /* 3. පින්තූර තිරයට අනුව Resize කරයි */
-    img {
-        max-width: 100% !important;
-        height: auto !important;
-    }
-
-    /* 4. ෆෝන් එකේදී පේළියට තිබෙන දේවල් එකක් යටතේ එකක් පෙළගස්වයි */
-    @media (max-width: 768px) {
-        .row {
-            display: flex;
-            flex-direction: column;
-        }
-        .col-lg-6, .col-lg-4, .col-md-6 {
-            width: 100% !important;
-        }
+    /* ලොකු ඉඩකඩක් ගන්නා කොටස් කුඩා තිරයට සකසයි */
+    .rank-container, .links-wrapper, .container-fluid {
+        width: 100% !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
     }
 </style>
+</style>
+   
     <!-- CSS (head කොටසට) -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
